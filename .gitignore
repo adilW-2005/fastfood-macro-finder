@@ -199,3 +199,9 @@ __pycache__/
 *.crt
 auth_token.py  # Only if it stores API keys or tokens
 
+# Backend secrets and Redis
+auth_token.py
+*.rdb
+
+# Virtual environment
+venv/
