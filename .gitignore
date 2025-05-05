@@ -172,3 +172,30 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Virtual environment
+venv/
+.env
+
+# Flask session and local DB
+flask_session/
+*.sqlite3
+*.rdb
+
+# System junk
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+
+# Secrets
+*.pem
+*.key
+*.crt
+auth_token.py  # Only if it stores API keys or tokens
+
