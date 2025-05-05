@@ -1,0 +1,181 @@
+.results {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  
+  .results::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .results::-webkit-scrollbar-thumb {
+    background-color: #3498DB;
+    border-radius: 8px;
+  }
+  
+  .results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .tabBtn {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 9999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .tabBtn:hover {
+    background: linear-gradient(to right, #3596eb, #00f2fe);
+    box-shadow: 0 8px 20px rgba(15, 211, 241, 0.4);
+  }
+  
+  .activeTab {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .searchBar {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .searchInput {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    max-width: 400px;
+    padding: 8px;
+    width: 80%;
+  }
+  
+  .tabContent {
+    margin-top: 20px;
+  }
+  
+  .foodItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 30px; /* More whitespace */
+    margin: 10px 0;     /* More spacing between cards */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #2ECC71;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background 0.3s;
+  }
+  
+  .foodItem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    background: rgba(52, 152, 219, 0.05);
+  }
+  
+  .foodInfo h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5;
+  }
+  
+  .foodInfo h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .foodInfo p {
+    font-size: 0.95rem;
+    margin: 15px 0 5 0;
+    color: #444;
+  }
+  
+  .foodActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 16px;
+  }
+  
+  .chartContainer {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .pieChartSmall {
+    background: conic-gradient(
+      #3498DB 0deg 180deg,
+      #F1C40F 180deg 300deg,
+      #2ECC71 300deg 360deg
+    );
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .innerCircle {
+    width: 43px;
+    height: 43px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+  
+  
+  .logItem {
+    background: #0fdaf1;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(15, 218, 241, 0.3);
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 14px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .unlog {
+    background: #2ECC71;
+  }
+  
+  .unlog:hover {
+    background: #28b463;
+  }
+
+  .foodAddress {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
+  }
+  

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- First Column: Search & Filters -->
+        <aside class="filters">
+            <h1>Fast Food Finder</h1>
+            <h2>Search & Filters</h2>
+
+            <!-- Location Input -->
+            <input type="text" placeholder="Enter location">
+
+            <!-- Max Calories Input -->
+            <div class="input-container">
+                <label>Max Calories</label>
+                <input type="number" placeholder="e.g. 500">
+            </div>
+
+            <!-- Min Protein Input -->
+            <div class="input-container">
+                <label>Min Protein</label>
+                <input type="number" placeholder="e.g. 20">
+            </div>
+
+            <!-- Radius Slider -->
+            <div class="range-container">
+                <div class="range-header">
+                    <span>Search Radius: <span id="radius-value">10</span> miles</span>
+                </div>
+                <input type="range" id="radius-slider" min="1" max="50" step="1" value="10">
+            </div>
+
+            <!-- AI-powered Search -->
+            <h3>AI-powered Search</h3>
+            <input type="text" placeholder="Enter an AI-powered NLP query">
+
+            <button>Search</button>
+        </aside>
+
+        <!-- Second Column: Results -->
+        <div class="results">
+            <div class="food-item">
+                <div class="food-info">
+                    <h3>Grilled Chicken Sandwich</h3>
+                    <p>350 cal | 40g protein | 30g carbs | 15g fat</p>
+                </div>
+                <div class="food-actions">
+                    <div class="chart-container">
+                        <div class="pie-chart-small"></div>
+                        <div class="inner-circle">350 kcal</div>
+                    </div>
+                    <button class="log-item">Log Item</button>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <div class="food-info">
+                    <h3>Turkey Wrap</h3>
+                    <p>320 cal | 35g protein | 25g carbs | 10g fat</p>
+                </div>
+                <div class="food-actions">
+                    <div class="chart-container">
+                        <div class="pie-chart-small"></div>
+                        <div class="inner-circle">320 kcal</div>
+                    </div>
+                    <button class="log-item">Log Item</button>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <div class="food-info">
+                    <h3>Salmon Bowl</h3>
+                    <p>450 cal | 50g protein | 40g carbs | 20g fat</p>
+                </div>
+                <div class="food-actions">
+                    <div class="chart-container">
+                        <div class="pie-chart-small"></div>
+                        <div class="inner-circle">450 kcal</div>
+                    </div>
+                    <button class="log-item">Log Item</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Column: Dashboard & Map -->
+        <aside class="dashboard">
+            <button class="sign-in">New User / Sign In</button>
+            <h2>Nutrition Dashboard</h2>
+            <div class="pie-chart"> 
+                <div class="chart-dashboard">
+                    <div class="inner-circle-dashboard">350 kcal</div>
+                </div>
+            </div>
+            <h2>Food Locations</h2>
+            <div class="map">
+                <img src="GoogleMap.webp">
+            </div>            
+        </aside>
+
+    </div>
+
+
+</body>
+</html>

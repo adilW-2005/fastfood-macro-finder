@@ -1,0 +1,170 @@
+/* 1) Remove flex from body */
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f8fbff, #eef7f3);
+    /* no display: flex or justify-content here */
+    /* no overflow: hidden unless you truly want to prevent full-page scrolling */
+  }
+  
+  /* 2) .container is just a position wrapper, not flex */
+  .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 100vh;
+        gap: 10px;
+        padding: 60px 10px 10px;
+     }
+  
+  /* ===== Left Column (Filters) - 25% fixed on the left ===== */
+  .filters {
+         background: white;
+         padding: 20px;
+         border-radius: 16px;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+         border-left: 6px solid #2ECC71; /* Green accent */
+     }
+  
+  /* ===== Middle Column (Results) - fill leftover space (50%) ===== */
+  .results {
+     height: 100vh; /* ✅ Adjust height to fit within the viewport */
+        overflow-y: auto; /* ✅ Enables scrolling within the container */
+         padding: 15px;
+         background: white;
+         border-radius: 12px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+     }
+  
+  .results {
+    flex: 1;
+    overflow-y: auto; /* only the results scroll */
+    padding: 20px;
+  }
+  
+  /* ===== Right Column (Dashboard) - 25% fixed on the right ===== */
+  .dashboard {
+        background: white;
+         padding: 20px;
+        border-radius: 16px;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         border-left: 6px solid #3498DB; /* Blue accent */
+     }
+  
+  /* ===== Food Item & Shared Styles ===== */
+  .food-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #2ECC71;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background 0.3s;
+  }
+  
+  .food-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(52, 152, 219, 0.05);
+  }
+  
+  .food-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .log-item {
+    background: #0fdaf1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 14px;
+    box-shadow: 0 5px 15px rgba(15, 218, 241, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .log-item:hover {
+    background: #0fd1d4ad;
+    box-shadow: 0 8px 20px rgba(15, 218, 241, 0.4);
+  }
+  
+  /* Middle Column Scrollbar */
+  .results::-webkit-scrollbar {
+    width: 8px;
+  }
+  .results::-webkit-scrollbar-thumb {
+    background-color: #3498DB;
+    border-radius: 8px;
+  }
+  .results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Pie Chart Small */
+  .pie-chart-small {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    transition: background 0.3s ease-in-out;
+  }
+  .inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Legend Colors */
+  .legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+  }
+  .carbs {
+    background-color: #3498DB; 
+  }
+  .protein {
+    background-color: #F1C40F; 
+  }
+  .fat {
+    background-color: #2ECC71; 
+  }
+  .container {
+        display: grid;
+         grid-template-columns: 1fr 2fr 1fr;
+         height: 100vh;
+         gap: 10px;
+         padding: 60px 10px 10px;
+     }
+
+     .pie-chart {
+        width: 200px;    /* Same width and height */
+        height: 200px;
+        position: relative;
+        border-radius: 50%; /* Make it circular */
+        overflow: hidden;    /* Hide anything outside the circle if needed */
+      }
+      

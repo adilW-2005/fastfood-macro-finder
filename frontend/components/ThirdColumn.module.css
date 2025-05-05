@@ -1,0 +1,112 @@
+/* ThirdColumn.module.css */
+
+.dashboard {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 6px solid #3498DB;
+    gap: 1.5rem;
+    height: 100vh; 
+  }
+  
+  .signIn {
+    background: #0F6DF1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px;
+    box-shadow: 0 5px 15px rgba(15, 151, 241, 0.3);
+    transition: all 0.3s ease-in-out;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .signIn:hover {
+    background: #0FD4C0;
+    box-shadow: 0 8px 20px rgba(241, 196, 15, 0.4);
+  }
+  
+  .pieChart {
+    width: 175px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .chartDashboard {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .innerCircleDashboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  }
+  
+  
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .legendItem {
+    font-size: 14px;
+  }
+  
+  .legendColor {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+  }
+  
+  .carbs {
+    background-color: #3498DB;
+  }
+  
+  .protein {
+    background-color: #F1C40F;
+  }
+  
+  .fat {
+    background-color: #2ECC71;
+  }
+  
+  .mapWrapper {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
