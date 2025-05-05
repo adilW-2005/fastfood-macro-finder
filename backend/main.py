@@ -6,6 +6,12 @@ from ai import nlp_to_json
 from config import app
 from data import data_bp  # Import the Blueprint from data.py
 from auth import auth_bp
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+
 
 CORS(app, supports_credentials=True, resources={r"/*": {"origins": "http://localhost:5173"}})
 
@@ -14,7 +20,7 @@ app.register_blueprint(auth_bp, url_prefix="/auth")
 
 
 
-API_KEY = "AIzaSyD1pyG_f8vKO_NHtUkMJwkbFq4Pg1vecUs"
+API_KEY = os.getenv("API_KEY")
 N_API_KEY = "YOUR_NUTRITION_API_KEY"
 
 @app.route("/recommendations", methods=['POST'])

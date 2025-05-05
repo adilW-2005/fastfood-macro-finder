@@ -6,11 +6,12 @@ const containerStyle = {
   height: "350px"
 };
 
+const token = import.meta.env.googleMapsApiKey;
 
 
 const MapComponent = ({ restaurants = [], userLocation }) => {
     return (
-        <LoadScript googleMapsApiKey={"AIzaSyD1pyG_f8vKO_NHtUkMJwkbFq4Pg1vecUs"}>
+        <LoadScript googleMapsApiKey={googleMapsApiKey}>
             <GoogleMap mapContainerStyle={containerStyle} center={userLocation} zoom={12}>
                 
                 {/* ✅ User Location Marker */}

@@ -1,8 +1,15 @@
 import openai
 import json
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+api_key = os.getenv("api_key")
+
 
 # OpenAI Client with Secure API Key
-client = openai.OpenAI(api_key="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")  # Replace with your actual key
+client = openai.OpenAI(api_key=api_key)  # Replace with your actual key
 
 def nlp_to_json(user_input):
     system_prompt = """ You are an AI that converts user requests into structured JSON API calls.

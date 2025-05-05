@@ -30,3 +30,6 @@ dist-ssr/
 
 # Lock files (optional, but consider version locking)
 frontend/package-lock.json
+
+# Vite secrets
+frontend/.env
