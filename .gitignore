@@ -205,3 +205,8 @@ auth_token.py
 
 # Virtual environment
 venv/
+
+
+
+.DS_Store
+
