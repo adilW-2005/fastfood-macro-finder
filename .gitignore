@@ -213,3 +213,7 @@ venv/
 
 # Secrets
 .env
+
+prices.py
+
+maps.py
